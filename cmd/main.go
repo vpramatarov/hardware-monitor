@@ -17,23 +17,17 @@ func main() {
 		}
 	}
 
-	run(display)
+	start(display)
 }
 
-func run(display string) {
+func start(display string) {
 	var runner hardware.IDisplay
 
-	if display == "cmd" {
-		runner = cmd.NewCmd()
-	} else if display == "ws" {
+	if display == "ws" {
 		runner = ws.NewWs()
 	} else {
-		panic("Invalid runner. Must be `cmd` or `ws`. Default is `ws`.")
+		runner = cmd.NewCmd()
 	}
 
-	show(runner)
-}
-
-func show(hardware hardware.IDisplay) {
-	hardware.DisplaySystemData()
+	runner.DisplaySystemData()
 }
