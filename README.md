@@ -16,4 +16,4 @@ Data is updated every 5 seconds.
 
 - web
     1. `go run .\cmd\main.go ws`
-    2. open [localhost](http://localhost:9000) (may need to wait 5 seconds to pull the data from the server)
+    2. open [localhost:9000](http://localhost:9000) (may need to wait 5 seconds to pull the data from the server)
